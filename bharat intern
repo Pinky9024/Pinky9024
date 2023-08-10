@@ -1,0 +1,26 @@
+import numpy as np
+import pandas as pd 
+import yfinance as yf
+feom sklearn.preprocessing import MinMaxScaler
+from tensorflow import keras
+from tensorflow.keras import layers
+
+# Step 1 : Data Collection
+ticker = 'GOOGL'
+start_data = '2010-01-01'
+end_data = '2023-01-01'
+data = yf.download(ticker,start=start_date, end=end_data)
+
+# Step 2 : Data Preprocessing
+scaler=MinMaxScaler()
+scaled_data = scaler.fit_transfoem(data['close'].values.reshape(-1,1))
+
+# ...
+
+# Step 3 : Model Creation
+model = keras.sequential([
+layers.LSTM(units=50,return_sequences=True,input_shape=(x_train.shape[1],1)),
+layers.LSTM
+
+
+
